@@ -1,0 +1,48 @@
+{
+    "usuario": {
+      "id": "UUID",
+      "nome": "Nome do Usuário",
+      "divisoes": [
+        {
+          "id": 1,
+          "nome": "Nome da Divisão",
+          "descricao": "Descrição da Divisão",
+          "exercicios": [
+            {
+              "id": 1,
+              "nome": "Supino Reto",
+              "series": [
+                {
+                  "id": 1,
+                  "repeticoes": 10,
+                  "carga": 50
+                },
+                {
+                  "id": 2,
+                  "repeticoes": 8,
+                  "carga": 55
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "nome": "Rosca Direta",
+              "series": [
+                {
+                  "id": 1,
+                  "repeticoes": 12,
+                  "carga": 20
+                },
+                {
+                  "id": 2,
+                  "repeticoes": 10,
+                  "carga": 25
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
+import { Division } from './components/Division'
 
 function App() {
 
@@ -73,10 +74,14 @@ function App() {
 
         {nameReturned.map(item => {
           // veriricar esse erro
-          return <p key={item.id}>{item.name}</p>
+          return <div key={item.id}>
+            <p>ID: {item.id}</p>
+            <p>NOME: {item.name} </p>
+            </div>
         })}
 
         </div>
+        <Division />
       </main>
     </>
   )
