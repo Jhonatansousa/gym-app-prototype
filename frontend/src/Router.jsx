@@ -1,8 +1,8 @@
 
 import { Route, Routes } from 'react-router-dom'
 import { DefaultLayout } from './layout/DefaultLayout'
-import { Home } from './components/Home'
-import { Division } from './components/Division'
+import { Home } from './pages/Home'
+import { Division } from './pages/Division'
 
 export function Router() {
 
