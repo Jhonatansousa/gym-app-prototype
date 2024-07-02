@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 
 import { useEffect, useState } from 'react'
 
@@ -62,12 +64,9 @@ export function Home () {
     return (
 
         <main>
-            <header>
-                <h1>WorkoutTracker</h1>
-                <h4>Your journey to strength, rep by rep.</h4>
-            </header>
+            
             <div>
-                <button>Adicionar Divisão de Treino</button>
+                <NavLink to='/division'>Adicionar Divisão de Treino</NavLink>
             </div>
 
             <div>

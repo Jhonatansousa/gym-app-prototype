@@ -1,5 +1,4 @@
-
-
+import { NavLink } from "react-router-dom"
 
 export const Division = () => {
 
@@ -7,8 +6,16 @@ export const Division = () => {
 
         <section>
             <div>
-                <h1>Nome da Divisão</h1>
-                <h4>Descrição da divisão</h4>
+
+                <div>
+                    <NavLink to='/'>
+                        HOME
+                    </NavLink>
+                </div>
+                <div>
+                    <h1>Nome da Divisão</h1>
+                    <h4>Descrição da divisão</h4>
+                </div>
             </div>
 
             <div>
