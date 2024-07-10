@@ -101,7 +101,6 @@ export function Home () {
                 <div>
 
                     {nameReturned.map(item => {
-                        // veriricar esse erro
                         return <div key={item.id}>
                             <p>ID: {item.id}</p>
                             <p>NOME: {item.name} </p>
