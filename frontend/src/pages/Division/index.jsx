@@ -20,7 +20,18 @@ const createDivisionFormSchema = z.object({
 export const Division = () => {
 
     const { register, handleSubmit, formState: { errors }, control } = useForm({
-        resolver: zodResolver(createDivisionFormSchema)
+        resolver: zodResolver(createDivisionFormSchema),
+        // adicionado recentemente pra ver se funciona o default values
+        defaultValues: {
+            divisionName: '',
+            exercise: [{
+                exerciseName: '',
+                series: [{
+                    reps: 0,
+                    weight: 0
+                }]
+            }]
+        }
     })
 
     const { fields, append, remove } = useFieldArray({
@@ -38,6 +49,13 @@ export const Division = () => {
                     weight: 0
                 }
             }
+        })
+    }
+
+    function addNewSet() {
+        append({
+            reps:0,
+            weight: 0
         })
     }
 
@@ -67,7 +85,9 @@ export const Division = () => {
                         <div key={field.id}>
                             <input type="text" placeholder="Digite o nome do Exercício" {...register(`exercise.${index}.exerciseName`)} />
                             <div>
-                                <button type="button"></button>
+                                <input type="number" {...register(`exercise.${index}.sets.reps`)}/>
+                                <input type="number" />
+                                <button type="button" onClick={addNewSet}>adicionar set</button>
                             </div>
                         </div>
 
